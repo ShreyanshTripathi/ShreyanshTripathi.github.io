@@ -1,0 +1,206 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Muhammad Naufil — Talks</title>
+    <meta name="author" content="Muhammad Naufil">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 15px;
+        color: #111827;
+        background: #fff;
+        line-height: 1.65;
+      }
+
+      a { color: #2563eb; text-decoration: none; }
+      a:hover { color: #1d4ed8; text-decoration: underline; }
+
+      /* Nav */
+      nav {
+        position: sticky; top: 0; z-index: 100;
+        background: rgba(255,255,255,0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .nav-inner {
+        max-width: 880px; margin: 0 auto; padding: 0 24px;
+        display: flex; align-items: center; justify-content: space-between; height: 56px;
+      }
+      .nav-name { font-weight: 700; font-size: 15px; color: #111827; text-decoration: none; }
+      .nav-links { display: flex; gap: 4px; }
+      .nav-links a {
+        color: #6b7280; font-size: 14px; font-weight: 500;
+        padding: 6px 12px; border-radius: 8px;
+        text-decoration: none; transition: color 0.15s, background 0.15s;
+      }
+      .nav-links a:hover, .nav-links a.active { color: #111827; background: #f9fafb; }
+
+      /* Content */
+      .container {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      h2 {
+        font-size: 22px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 48px 0 24px;
+        color: #111827;
+      }
+
+      /* Talk rows */
+      .talk-row {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        padding: 20px 0;
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .talk-row:last-child { border-bottom: none; }
+
+      .talk-media { flex: 0 0 360px; }
+      .talk-media iframe { display: block; border-radius: 8px; }
+      .talk-media img { width: 360px; border-radius: 8px; object-fit: cover; }
+
+      .talk-info { flex: 1; }
+      .talk-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+      .talk-venue { font-size: 13px; color: #6b7280; font-style: italic; margin-bottom: 6px; }
+      .talk-desc { font-size: 14px; color: #374151; line-height: 1.6; }
+
+      /* Video grid */
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .video-embed {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+      }
+
+      @media (max-width: 700px) {
+        .talk-row { flex-direction: column; }
+        .talk-media { flex: none; width: 100%; }
+        .talk-media iframe { width: 100%; }
+        .talk-media img { width: 100%; }
+        .video-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a class="nav-name" href="index.html">Muhammad Naufil</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="index.html#experience">Experience</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#publications">Publications</a>
+          <a href="talks.html" class="active">Talks</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <h2>Public Talks</h2>
+
+      <div class="talk-row">
+        <div class="talk-media">
+          <iframe width="360" height="180" src="https://www.youtube.com/embed/aoq2FDim8Ew?si=DLRdM-lZJDGBNaWz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="talk-info">
+          <div class="talk-title">Build Actions with Dialogflow</div>
+          <div class="talk-venue">Google Developer Students Club</div>
+          <div class="talk-desc">Google Developer Students Club Online talk at Sir Syed University of Engineering &amp; Technology</div>
+        </div>
+      </div>
+
+      <div class="talk-row">
+        <div class="talk-media">
+          <iframe width="360" height="180" src="https://www.youtube.com/embed/I2qgBZbiFDs?si=6dbPklgz9k2NGlXF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="talk-info">
+          <div class="talk-title">Speech Recognition with Python</div>
+          <div class="talk-venue">PyCon</div>
+          <div class="talk-desc">PyCon, Habib University, Karachi.ai 8th Meetup</div>
+        </div>
+      </div>
+
+      <div class="talk-row">
+        <div class="talk-media">
+          <img src="images/self_learning.jpg" alt="Self Learning Talk">
+        </div>
+        <div class="talk-info">
+          <div class="talk-title">Self Learning</div>
+          <div class="talk-venue">NEDUET Student Society</div>
+          <div class="talk-desc">Advised young students about free resources and tech scholarships to get their hands on early in their careers</div>
+        </div>
+      </div>
+
+      <h2>YouTube Channel</h2>
+
+      <div class="video-grid">
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/7pMasRv79tg?si=PSeqzrSJygpHwGPG" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/v0RBI1fVRrM?si=atxgcw0a1YbAYD8t" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/GyDG7uLdl04?si=jNwhttrp1qevGK_H" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/fuFvNptn9bI?si=wn5qcJgigF3qLhGs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/01-_p3vzD0A?si=_fLIddifmwQxBix_" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/T6RBt5lw_ps?si=WV2F3Ijz4DPUd4v8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/1Lxia2Cu_Gg?si=jBd5VxB9111aPQ-Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/de3dHMYd8FY?si=z90cc2lHmotTMWEE" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/ewxCQfNwXAY?si=nfp2pHrmrUk7VqC4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/S7jHdoSu8TA?si=x-oaScCMGanl3tq1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/MUrsdzfRgpg?si=PqX_HQru6O4-xQt4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+          <iframe class="video-embed" src="https://www.youtube.com/embed/AlYdudYx6rw?si=oEngIl-h7pGAYSD9" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
