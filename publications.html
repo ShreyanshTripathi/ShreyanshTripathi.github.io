@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications — Shreyansh Tripathi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    /* SHARED STYLES ... (Same as Experience) */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --accent: #2563eb; --text: #111827; --text-muted: #6b7280; --border: #e5e7eb; --bg: #ffffff; --bg-subtle: #f9fafb; --radius: 12px; }
+    [data-theme="dark"] { --accent: #a78bfa; --text: #ede9fe; --text-muted: #9b8ec4; --border: rgba(139,92,246,0.22); --bg: #0c0a18; --bg-subtle: #15122a; }
+    body { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text); background: var(--bg); }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    [data-theme="dark"] nav { background: rgba(12,10,24,0.92); }
+    .nav-inner { max-width: 880px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-links { display: flex; gap: 4px; }
+    .nav-links a { color: var(--text-muted); font-size: 14px; font-weight: 500; padding: 6px 12px; text-decoration: none; }
+    .container { max-width: 880px; margin: 0 auto; padding: 48px 24px; }
+    
+    /* PUB CARDS */
+    .pub-card { padding: 26px; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 12px; margin-bottom: 16px; background: var(--bg); }
+    .pub-title { font-size: 16px; font-weight: 600; margin-bottom: 8px; }
+    .pub-authors { font-size: 14px; color: var(--text-muted); margin-bottom: 10px; }
+    .tag { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; background: var(--accent-light); color: var(--accent); margin-right: 6px; }
+    .pub-link { font-size: 12px; font-weight: 500; color: var(--accent); padding: 3px 10px; border: 1px solid #bfdbfe; border-radius: 6px; text-decoration: none; margin-right: 6px; }
+    #theme-toggle { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 5px 9px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <nav></nav>
+
+  <div class="container">
+    <h2>Publications</h2>
+
+    <div class="pub-card" style="border-left-color: #7c3aed;">
+      <div class="pub-title">Optimizing Mixture-of-Experts Inference Time via Model Deployment and Communication Scheduling</div>
+      <div class="pub-authors">Jialong Li, <strong>Shreyansh Tripathi</strong>, Lakshay Rastogi, Yiming Lei, Rui Pan, Yiting Xia</div>
+      <div style="margin-bottom:10px;">
+        <span class="tag">IEEE Transactions on Networking, 2026</span>
+        <span class="tag">Distributed ML</span>
+      </div>
+      <a class="pub-link" href="#">IEEE Xplore</a><a class="pub-link" href="#">arXiv</a>
+    </div>
+
+    <div class="pub-card" style="border-left-color: #3b82f6;">
+      <div class="pub-title">Targeting Impaired Antimicrobial Immunity in the Brain for the Treatment of Alzheimer's Disease</div>
+      <div class="pub-authors">Tamas Fulop, <strong>Shreyansh Tripathi</strong>, Serafim Rodrigues, et al.</div>
+      <div style="margin-bottom:10px;">
+        <span class="tag">Neuropsychiatr Dis Treat. 2021</span>
+        <span class="tag">Molecular Dynamics</span>
+      </div>
+      <a class="pub-link" href="#">Journal Link</a>
+    </div>
+
+    <div class="pub-card" style="border-left-color: #14b8a6;">
+      <div class="pub-title">A review of Indian seismic zone based on historical earthquake data</div>
+      <div class="pub-authors">Pato Kumari, <strong>Shreyansh Tripathi</strong>, V. K. Sharma </div>
+      <div style="margin-bottom:10px;">
+        <span class="tag">AIP Conference Proceedings, 2019</span>
+        <span class="tag">Data Analytics</span>
+      </div>
+      <a class="pub-link" href="#">AIP Publishing</a>
+    </div>
+  </div>
+
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+    if (localStorage.getItem('theme') === 'dark') { html.setAttribute('data-theme', 'dark'); btn.textContent = '☀️'; }
+    btn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
