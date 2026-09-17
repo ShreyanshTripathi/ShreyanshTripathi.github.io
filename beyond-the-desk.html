@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beyond the Desk — Shreyansh Tripathi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    /* SHARED STYLES */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --accent: #2563eb;
+        --accent-light: #dbeafe;
+        --text: #111827;
+        --text-muted: #6b7280;
+        --border: #e5e7eb;
+        --bg: #ffffff;
+        --bg-subtle: #f9fafb;
+        --radius: 12px;
+        --series-conf: #2a78d6;
+        --series-hack: #eb6834;
+    }
+    [data-theme="dark"] {
+        --accent: #a78bfa;
+        --accent-light: rgba(167,139,250,0.12);
+        --text: #ede9fe;
+        --text-muted: #9b8ec4;
+        --border: rgba(139,92,246,0.22);
+        --bg: #0c0a18;
+        --bg-subtle: #15122a;
+        --series-conf: #3987e5;
+        --series-hack: #d95926;
+    }
+    body { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text); background: var(--bg); line-height: 1.65; }
+
+    /* NAV */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+    [data-theme="dark"] nav { background: rgba(12,10,24,0.92); }
+    .nav-inner { max-width: 880px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a { color: var(--text-muted); font-size: 14px; font-weight: 500; padding: 6px 12px; text-decoration: none; border-radius: 8px; transition: background 0.15s; }
+    .nav-links a:hover { background: var(--bg-subtle); color: var(--text); }
+    .nav-links a.nav-download { background: var(--text); color: var(--bg); font-weight: 600; margin-left: 8px; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 880px; margin: 0 auto; padding: 48px 24px; }
+    h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+    .page-intro { color: var(--text-muted); font-size: 14.5px; max-width: 560px; margin-bottom: 36px; }
+    h3.section-heading { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin: 40px 0 16px; }
+    h3.section-heading:first-of-type { margin-top: 0; }
+
+    /* STAT TILES */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 8px; }
+    .stat-tile { padding: 18px 16px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-subtle); border-top: 3px solid var(--text-muted); }
+    .stat-tile.conf { border-top-color: var(--series-conf); }
+    .stat-tile.hack { border-top-color: var(--series-hack); }
+    .stat-value { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+    .stat-label { margin-top: 4px; font-size: 12px; font-weight: 500; color: var(--text-muted); }
+    @media (max-width: 640px) { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+    /* EVENT CARDS */
+    .event-card { padding: 26px 28px; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 14px; margin-bottom: 20px; background: var(--bg); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .event-title { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+    .event-meta { margin-bottom: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; text-transform: uppercase; background: var(--accent-light); color: var(--accent); }
+    .event-desc { font-size: 14px; color: #374151; margin-bottom: 16px; }
+    [data-theme="dark"] .event-desc { color: #c4b8e8; }
+    .event-links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .event-link { font-size: 12px; font-weight: 600; color: var(--accent); padding: 5px 12px; border: 1px solid var(--accent); border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+    .event-link:hover { background: var(--accent); color: white; }
+
+    #theme-toggle { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 5px 9px; cursor: pointer; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span style="font-weight:700; font-size: 15px;">Shreyansh Tripathi</span>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="beyond-the-desk.html">Beyond the Desk</a>
+        <a href="contact.html">Contact</a>
+        <a href="ResumeSept2026Research.pdf" class="nav-download" download>Download CV</a>
+        <button id="theme-toggle">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Beyond the Desk</h2>
+    <p class="page-intro">Conferences, workshops, and hackathons I've taken part in alongside my research.</p>
+
+    <div class="stats-row">
+      <div class="stat-tile">
+        <div class="stat-value">4</div>
+        <div class="stat-label">Events attended</div>
+      </div>
+      <div class="stat-tile conf">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Conferences &amp; workshops</div>
+      </div>
+      <div class="stat-tile hack">
+        <div class="stat-value">2</div>
+        <div class="stat-label">Hackathons</div>
+      </div>
+      <div class="stat-tile">
+        <div class="stat-value">4th / 235</div>
+        <div class="stat-label">Best hackathon result</div>
+      </div>
+    </div>
+
+    <h3 class="section-heading">Conferences &amp; Workshops</h3>
+
+    <div class="event-card" style="border-left-color: var(--series-conf);">
+      <div class="event-title">Human-Centred Security Meets Social Sciences: Mapping the Frictions</div>
+      <div class="event-meta">
+        <span class="tag">Workshop @ SOUPS 2026</span>
+      </div>
+      <p class="event-desc">Contributed an extended abstract mapping the frictions in AI agentic memory systems and sharing protocols, then joined the workshop to discuss the friction between social science and human-centred computer science.</p>
+      <div class="event-links">
+        <a class="event-link" href="https://nexusinstitut.de/workshop-at-symposium-on-usable-privacy-and-security/">Workshop Page</a>
+      </div>
+    </div>
+
+    <div class="event-card" style="border-left-color: var(--series-conf);">
+      <div class="event-title">AI Transparency Conference</div>
+      <div class="event-meta">
+        <span class="tag">Nürnberg, Germany</span>
+      </div>
+      <p class="event-desc">Attended the conference and engaged with talks spanning AI judges to machine unlearning.</p>
+      <div class="event-links">
+        <a class="event-link" href="https://coairesearch.org/aitc-2026/">Conference Page</a>
+      </div>
+    </div>
+
+    <h3 class="section-heading">Hackathons</h3>
+
+    <div class="event-card" style="border-left-color: var(--series-hack);">
+      <div class="event-title">One Dial, Not a Tree: Occupational Personas and Emergent Misalignment</div>
+      <div class="event-meta">
+        <span class="tag">Apart Research — Digital Minds Research Sprint</span>
+        <span class="tag">4th of 235 entries</span>
+      </div>
+      <p class="event-desc">Built a protocol to test whether personas that elicit emergent misalignment sit in a hierarchy or a flat structure. Found that evaluation awareness makes models more misaligned, and that even negated instructions raise misalignment rates simply through the presence of trigger phrases.</p>
+      <div class="event-links">
+        <a class="event-link" href="https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16">Sprint Page</a>
+      </div>
+    </div>
+
+    <div class="event-card" style="border-left-color: var(--series-hack);">
+      <div class="event-title">CISPA European Cybersecurity &amp; AI Hackathon Championship</div>
+      <div class="event-meta">
+        <span class="tag">Munich Regionals</span>
+        <span class="tag">5th Place</span>
+      </div>
+      <p class="event-desc">Built solutions to three research problems — dataset inference, watermark forging, and stolen model detection — placing 5th in the Munich regional round.</p>
+      <div class="event-links">
+        <a class="event-link" href="https://cispa.de/en/cispa-hackathon-championship">Championship Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const html = document.documentElement;
+    const btn = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('theme') === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      btn.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
