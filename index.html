@@ -32,7 +32,10 @@
 
     .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
     .hero { padding: 64px 0 48px; display: flex; gap: 52px; align-items: flex-start; }
+    .hero-photo { display: flex; flex-direction: column; align-items: center; }
     .hero-photo img { width: 256px; height: 256px; border-radius: 50%; border: 3px solid var(--border); object-fit: cover; }
+    .hero-caption { margin-top: 14px; max-width: 220px; text-align: center; font-size: 12px; font-style: italic; line-height: 1.5; color: var(--text-muted); }
+    .hero-caption span { display: block; font-style: normal; font-size: 11px; letter-spacing: 0.03em; text-transform: uppercase; margin-top: 3px; opacity: 0.75; }
     h1.name { font-size: 38px; font-weight: 700; background: linear-gradient(135deg, #000000 0%, #0c0020 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     [data-theme="dark"] h1.name { background: linear-gradient(135deg, #ede9fe 0%, #a78bfa 100%); -webkit-background-clip: text; }
     .hero-subtitle { color: var(--text-muted); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
@@ -54,7 +57,7 @@
         <a href="projects.html">Projects</a>
         <a href="publications.html">Publications</a>
         <a href="contact.html">Contact</a>
-        <a href="ResumeApril2026.pdf" class="nav-download" download>Download CV</a>
+        <a href="ResumeSept2026Research.pdf" class="nav-download" download>Download CV</a>
         <button id="theme-toggle">🌙</button>
       </div>
     </div>
@@ -66,9 +69,8 @@
         <h1 class="name">Shreyansh Tripathi</h1>
         <p class="hero-subtitle">Machine Learning Engineer & Researcher &nbsp;·&nbsp; MS DSAI @ Saarland University</p>
         <div class="hero-bio">
-          <p>I build systems at the intersection of <span class="hl-blue">large-scale generative models</span>, distributed ML infrastructure, and GPU-optimized inference. I hold a B.Tech in IT & Mathematics from the University of Delhi, and I am currently pursuing my MSc in Data Science and Artificial Intelligence at <strong>Saarland University</strong>.</p>
-          <p>Previously, I worked as an ML Student Research Assistant at the <strong>Max Planck Institute for Informatics</strong> and as an AI Security Research Fellow at <strong>AI Safety Saarland</strong>.</p>
-          <p>On the side, I build agentic AI workflows — including an advanced Research Agent Framework that maps evolving academic interests using RAG and temporal decay.</p>
+          <p>I work on <span class="hl-blue">distributed ML systems</span>, generative model inference, and AI safety — currently pursuing my MSc in Data Science and AI at <strong>Saarland University</strong>, and researching multi-agent systems at the <strong>Max Planck Institute for Software Systems</strong>. My work spans optimizing Mixture-of-Experts inference on GPU clusters (published in IEEE Transactions on Networking, my work at Max Planck Institute for Informatics), red-teaming LLMs for unlearning robustness to AI safety in multiagent systems.</p>
+          <p>Off the clock, I'm usually chasing a good cup of coffee (making it, not just drinking it), fumbling through guitar chords I swear I'll master eventually, scribbling half-finished stories, or planning the next trip — usually all fueled by the same restlessness that makes me want to understand how things work.</p>
         </div>
             <a class="hero-link" href="mailto:shreyanshtripathi03@gmail.com">
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -92,6 +94,7 @@
           <source srcset="images/cropped_circle_image_512.webp" type="image/webp">
           <img src="images/cropped_circle_image_512.png" width="256" height="256" alt="Shreyansh Tripathi" fetchpriority="high" decoding="async">
         </picture>
+        <p class="hero-caption">My love for swords and sabers captured in an image<span>Fortress Hohensalzburg, Salzburg, Austria</span></p>
       </div>
     </div>
   </div>
