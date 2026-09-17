@@ -32,11 +32,11 @@
     /* NAV */
     nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
     [data-theme="dark"] nav { background: rgba(12,10,24,0.92); }
-    .nav-inner { max-width: 880px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-    .nav-links { display: flex; gap: 4px; align-items: center; }
-    .nav-links a { color: var(--text-muted); font-size: 14px; font-weight: 500; padding: 6px 12px; text-decoration: none; border-radius: 8px; transition: background 0.15s; }
+    .nav-inner { max-width: 880px; margin: 0 auto; padding: 10px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; row-gap: 8px; min-height: 56px; }
+    .nav-links { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; row-gap: 6px; }
+    .nav-links a { color: var(--text-muted); font-size: 14px; font-weight: 500; padding: 6px 12px; text-decoration: none; border-radius: 8px; transition: background 0.15s; white-space: nowrap; }
     .nav-links a:hover { background: var(--bg-subtle); color: var(--text); }
-    .nav-links a.nav-download { background: var(--text); color: var(--bg); font-weight: 600; margin-left: 8px; }
+    .nav-links a.nav-download { background: var(--text); color: var(--bg); font-weight: 600; margin-left: 8px; white-space: nowrap; }
 
     /* CONTENT LAYOUT */
     .container { max-width: 880px; margin: 0 auto; padding: 48px 24px; }
@@ -65,7 +65,7 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <span style="font-weight:700; font-size: 15px;">Shreyansh Tripathi</span>
+      <span style="font-weight:700; font-size: 15px; white-space:nowrap;">Shreyansh Tripathi</span>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="experience.html">Experience</a>
